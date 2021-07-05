@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "plus_one",
+    "two_sum",
+]
