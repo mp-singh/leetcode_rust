@@ -3,10 +3,6 @@ use std::ops::Add;
 extern crate num_bigint;
 use num_bigint::BigInt;
 
-fn main() {
-    println!("Plus One Problem. Run the tests to see if they pass using 'cargo test'");
-}
-
 pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
     digits
         .into_iter()

@@ -1,0 +1,65 @@
+- Community:
+    GET:
+        - Get One => /communities/:provider
+        - Get me => /me -> /communities/:provider/members/me
+        - Get all members => /community/members -> communities/:provider/members
+        - Member in community => /communities/:provider/members/:memberId
+        - Get my Roles => /communities/:provider/members/roles
+            -> This takes in an access token as param
+
+- OAuth
+    GET:
+        - /oauth/:providerName/callback
+        - /oauth/providerName/url
+            -> Optional Destination Param for redirect
+
+- Event (tours did not exits, this is all new)
+    GET:
+        - Get by event Id =>               /events/:id
+        - Get by community Id =>        /events/communities/:id
+            -> time range query params (start, end)
+        - Get next event =>             /events/communities/:id/next
+        - Get attendees by event Id =>  /events/:id/attendees
+            -> params: status (Y, N, Maybe)
+        - Get tpyes by community Id =>  /events/communities/:id/types
+    
+    POST:
+        - Create event => /events
+        - Create type =>  /events/communities/:id/types
+        - Set RSVP for event => /events/:id/attendees
+    DELETE:
+        - Delete type By Id =>  /events/communities/:id/types/:id
+        - Delete event by Id => /events/:id
+
+- Registrar
+    GET: 
+        - Get by community name => /registration/id/:id -> /registrations/community/:name
+        - /registration/:prov/:id -> /registrations/community/:name/providers/:prov
+        - /registration/token -> /registrations/token
+        - /registration/uuid/:uuid -> /registrations/id/:id
+        - /registration/login/:community -> /registrations/login/community/:name
+    
+    POST:
+        - Create => /registration/regsiter -> /registrations/regsiter
+    
+    DELETE:
+        - Delete by id => /registration/id/:id -> /registrations/id/:id
+
+- Subscription
+    GET:
+        - Get Catalog => /subscriptions
+        - /subscriptions/:subscription/services
+        - Get Service => /community/subscriptions/:subscription/services -> /subscriptions/:subscription/communities/:community/services
+        - Get Subscription => /community/subscriptions -> /subscriptions/:subscription/communities/:community
+
+    POST: 
+        - Create Subscription => /community/subscriptions/:subscription -> /subscriptions/communities/:community/services/:service
+        - Add Service => /subscriptions/communities/:community/services/:service
+    
+    DELETE:
+        - Remove Subscription => /community/subscriptions/:subscription -> /subscriptions/:subscription/communities/:community
+
+- Bouncer
+    GET:
+        - /bouncer/sign
+        - /bouncer/verify
