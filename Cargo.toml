@@ -5,4 +5,5 @@ members = [
     "reverse_int",
     "palindrome",
     "remove_element",
+    "third_max_num",
 ]
