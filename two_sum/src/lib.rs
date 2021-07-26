@@ -1,9 +1,5 @@
 use std::collections::HashMap;
 
-fn main() {
-    println!("Two Sum Problem. Run the tests to see if they pass using 'cargo test'");
-}
-
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut compliments: HashMap<i32, i32> = HashMap::new();
     for (k, v) in nums.iter().enumerate() {
