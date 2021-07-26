@@ -2,4 +2,5 @@
 members = [
     "plus_one",
     "two_sum",
+    "reverse_int"
 ]

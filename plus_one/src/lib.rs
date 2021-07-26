@@ -37,11 +37,11 @@ mod tests {
 
     #[test]
     fn t2() {
-        assert_eq!(plus_one(vec![1,2,3]),[1,2,4])
+        assert_eq!(plus_one(vec![1, 2, 3]), [1, 2, 4])
     }
 
     #[test]
     fn t3() {
-        assert_eq!(plus_one(vec![4,3,2,1]),[4,3,2,2])
+        assert_eq!(plus_one(vec![4, 3, 2, 1]), [4, 3, 2, 2])
     }
 }
