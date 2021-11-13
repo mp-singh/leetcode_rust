@@ -8,7 +8,7 @@ pub fn third_max(nums: Vec<i32>) -> i32 {
                 result.push(*num)
             }
             false => {
-                if num > &result[j-1] {
+                if num > &result[j - 1] {
                     j += 1;
                     result.push(*num)
                 }
