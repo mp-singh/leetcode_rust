@@ -6,5 +6,6 @@ members = [
     "palindrome",
     "remove_element",
     "third_max_num",
-    "daily_temperatures"
+    "daily_temperatures",
+    "reverse_bits"
 ]
