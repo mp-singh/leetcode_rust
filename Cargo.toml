@@ -11,4 +11,5 @@ members = [
     "number_of_1_bits",
     "sort_colors",
     "first_unique_char",
+    "sort_char_by_frequency",
 ]
