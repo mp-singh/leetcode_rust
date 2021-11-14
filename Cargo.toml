@@ -12,4 +12,5 @@ members = [
     "sort_colors",
     "first_unique_char",
     "sort_char_by_frequency",
+    "sort_arr_by_incr_frequency"
 ]
