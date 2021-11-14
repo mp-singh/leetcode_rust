@@ -7,5 +7,6 @@ members = [
     "remove_element",
     "third_max_num",
     "daily_temperatures",
-    "reverse_bits"
+    "reverse_bits",
+    "number_of_1_bits",
 ]

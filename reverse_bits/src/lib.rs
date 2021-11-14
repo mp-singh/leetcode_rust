@@ -3,9 +3,9 @@ pub fn reverse_bits(x: u32) -> u32 {
     let mut y = 0;
     let mut j = x;
     for _ in 0..32 {
-        y = y << 1;
-        y = y | (j & 1);
-        j = j >> 1;
+        y <<= 1;
+        y |= j & 1;
+        j >>= 1;
     }
     y
 }
