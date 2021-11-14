@@ -10,4 +10,5 @@ members = [
     "reverse_bits",
     "number_of_1_bits",
     "sort_colors",
+    "first_unique_char",
 ]
