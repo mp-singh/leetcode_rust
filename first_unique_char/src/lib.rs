@@ -3,10 +3,10 @@ use std::collections::HashMap;
 pub fn first_uniq_char(s: String) -> i32 {
     let mut char_count = HashMap::new();
     s.chars().for_each(|c| {
-        if char_count.contains_key(&c) {
-            *char_count.get_mut(&c).unwrap() += 1;
+        if let std::collections::hash_map::Entry::Vacant(e) = char_count.entry(c) {
+            e.insert(1);
         } else {
-            char_count.insert(c, 1);
+            *char_count.get_mut(&c).unwrap() += 1;
         }
     });
     s.chars()

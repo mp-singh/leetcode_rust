@@ -3,16 +3,15 @@ pub fn sort_colors(nums: &mut Vec<i32>) -> &Vec<i32> {
     let white = nums.iter().filter(|&white| *white == 1).count();
     let blue = nums.iter().filter(|&blue| *blue == 2).count();
 
-    for i in 0..red {
-        nums[i] = 0;
+    for item in nums.iter_mut().take(red) {
+        *item = 0;
     }
-    for i in red..(red + white) {
-        nums[i] = 1;
+    for item in nums.iter_mut().skip(red).take(white) {
+        *item = 1;
     }
-    for i in (red + white)..(red + white + blue) {
-        nums[i] = 2;
+    for item in nums.iter_mut().skip(red + white).take(blue) {
+        *item = 2;
     }
-    println!("{:?}", nums);
     nums
 }
 
