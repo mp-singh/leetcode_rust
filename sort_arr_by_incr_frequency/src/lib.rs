@@ -10,7 +10,7 @@ pub fn frequency_sort(nums: Vec<i32>) -> Vec<i32> {
         .into_iter()
         .collect::<Vec<_>>();
 
-    freq.sort_by(|a, b| a.1.cmp(&b.1).then(a.0.cmp(&b.0).reverse()));
+    freq.sort_by(|a, b| a.1.cmp(&b.1).then(a.0.cmp(b.0).reverse()));
     let res = freq.iter().fold(Vec::new(), |mut r, t| {
         for _ in 0..t.1 {
             r.push(*t.0);
