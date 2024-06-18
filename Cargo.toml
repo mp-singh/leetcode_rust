@@ -15,4 +15,5 @@ members = [
     "sort_arr_by_incr_frequency",
     "ransome_note",
     "middle_of_linked_list",
+    "max_consecutive_ones",
 ]
