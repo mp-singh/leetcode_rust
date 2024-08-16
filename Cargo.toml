@@ -18,4 +18,5 @@ members = [
     "max_consecutive_ones",
     "find_numbers_with_even_number_of_digits",
     "remove_duplicates_from_sorted_list",
+    "add_binary",
 ]
